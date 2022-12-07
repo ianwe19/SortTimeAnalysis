@@ -20,7 +20,7 @@ public:
 
 	bool IsTicking();
 
-	void GetTime();
+	int GetTime();
 
 	void Clear();
 

@@ -11,8 +11,10 @@
 
 int main()
 {
-    
-    Timer bubbleTimer;
+    int bubbleTime = 0;
+    int insertionTime = 0;
+    int selectionTime = 0;
+
     Timer insertionTimer;
     Timer selectionTimer;
 
@@ -29,29 +31,16 @@ int main()
 
     std::cout << "Sorting...\n";
 
-    bubbleTimer.Start();
-    data500.BubbleSort(NUM_FILE_500);
-    bubbleTimer.Stop();
+    bubbleTime = data500.BubbleSort(NUM_FILE_500);
 
-    insertionTimer.Start();
     data500.InsertionSort(NUM_FILE_500);
-    insertionTimer.Stop();
 
-    selectionTimer.Start();
     data500.SelectionSort(NUM_FILE_500);
-    selectionTimer.Stop();
 
     std::cout << "SORTS COMPLETE!\n";
-    std::cout << "Elapsed time <Bubble Sort>      : ";
-    bubbleTimer.GetTime();
-    std::cout << "Elapsed time <Insertion Sort>   : ";
-    insertionTimer.GetTime();
-    std::cout << "Elapsed time <Selection Sort>   : ";
-    selectionTimer.GetTime();
-
-    bubbleTimer.Clear();
-    insertionTimer.Clear();
-    selectionTimer.Clear();
+    std::cout << "Elapsed time <Bubble Sort>      : " << bubbleTime;
+    std::cout << "Elapsed time <Insertion Sort>   : " << insertionTime;
+    std::cout << "Elapsed time <Selection Sort>   : " << selectionTime;
     // END 500 ELEMENT SORT
 
 

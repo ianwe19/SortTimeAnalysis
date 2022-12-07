@@ -15,11 +15,11 @@ public:
 	~DataHousing();
 
 
-	void BubbleSort(int);
+	int BubbleSort(int);
 
-	void InsertionSort(int);
+	int InsertionSort(int);
 
-	void SelectionSort(int);
+	int SelectionSort(int);
 
 	void ReadData(int, const char*);
 };

@@ -1,4 +1,5 @@
 #include "DataHousing.h"
+#include "Timer.h"
 #include <fstream>
 #include <iostream>
 
@@ -25,7 +26,11 @@ DataHousing::~DataHousing() {
 }
 
 
-void DataHousing::BubbleSort(int whichFile) {
+int DataHousing::BubbleSort(int whichFile) {
+	Timer bubbleTimer;
+
+	bubbleTimer.Start();
+
 	bool swap = true;
 	while (swap == true) {
 		swap = false;
@@ -39,10 +44,16 @@ void DataHousing::BubbleSort(int whichFile) {
 			}
 		}
 	}
+	bubbleTimer.Stop();
+	return bubbleTimer.GetTime();
 }
 
 
-void DataHousing::InsertionSort(int whichFile) {
+int DataHousing::InsertionSort(int whichFile) {
+	Timer insertionTimer;
+
+	insertionTimer.Start();
+
 	int currentValue;
 	for (int i = 1; i < whichFile; i++) {
 		int j = i - 1;
@@ -56,7 +67,7 @@ void DataHousing::InsertionSort(int whichFile) {
 }
 
 
-void DataHousing::SelectionSort(int whichFile) {
+int DataHousing::SelectionSort(int whichFile) {
 	for (int i = 0; i < whichFile - 1; i++) {
 		int currentMin = i;
 		for (int j = i + 1; j < whichFile; j++) {
