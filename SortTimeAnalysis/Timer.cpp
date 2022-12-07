@@ -10,7 +10,6 @@ Timer::Timer() {
 	this->beginTime = 0;
 	this->endTime = 0;
 	this->elapsedTime = 0;
-	this->secondsElapsed = 0;
 	this->milsElapsed = 0;
 }
 
@@ -49,7 +48,6 @@ bool Timer::IsTicking() {
 
 void Timer::GetTime() {
 	this->elapsedTime = this->endTime - this->beginTime;
-	this->secondsElapsed = elapsedTime / CLOCKS_PER_SEC;
 	this->milsElapsed = elapsedTime / (CLOCKS_PER_SEC / 1000);
-	std::cout << this->secondsElapsed << "." << this->milsElapsed << " seconds have passed.";
+	std::cout << this->milsElapsed << " milliseconds";
 }

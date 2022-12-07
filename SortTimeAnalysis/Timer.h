@@ -8,7 +8,6 @@ private:
 	clock_t beginTime;
 	clock_t endTime;
 	clock_t elapsedTime;
-	long int secondsElapsed;
 	long int milsElapsed;
 
 public:
