@@ -11,8 +11,10 @@ private:
 	int arrayLength;
 
 public:
-	// CONSTRUCTOR
 	DataHousing();
+	DataHousing(int);
+
+	~DataHousing();
 
 
 	void BubbleSort(int*);

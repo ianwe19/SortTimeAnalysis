@@ -3,10 +3,10 @@
 #include <iostream>
 
 
-#define NUM_FILE_500  0
-#define NUM_FILE_5K   1
-#define NUM_FILE_25K  2
-#define NUM_FILE_100K 3
+#define NUM_FILE_500  500
+#define NUM_FILE_5K   5000
+#define NUM_FILE_25K  25000
+#define NUM_FILE_100K 100000
 
 
 DataHousing::DataHousing() {
@@ -15,6 +15,20 @@ DataHousing::DataHousing() {
 	this->selectionSort = 0;
 	this->arrayLength = 0;
 	this->storageArray = 0;
+}
+
+
+DataHousing::DataHousing(int whichFile) {
+	this->bubbleSort[whichFile] = 0;
+	this->insertionSort[whichFile] = 0;
+	this->selectionSort[whichFile] = 0;
+	this->storageArray[whichFile] = 0;
+	this->arrayLength = 0;
+}
+
+
+DataHousing::DataHousing() {
+	delete[] storageArray;
 }
 
 
@@ -100,4 +114,5 @@ void DataHousing::ReadData(int whichFile) {
 		// if the file didn't open, echo this to the user
 		std::cout << "ERROR: The file could not be opened for reading...\n";
 	}
+
 }
