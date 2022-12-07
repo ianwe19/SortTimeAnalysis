@@ -25,6 +25,6 @@ public:
 	void InsertionSort(int);
 	void SelectionSort(int);
 
-	void ReadData(const char*);
+	void ReadData(int, const char*);
 };
 #endif

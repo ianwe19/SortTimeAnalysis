@@ -24,7 +24,7 @@ int main()
 
     std::cout << "Populating arrays... <500 elements> <\n";
 
-    data500.ReadData("NumFile500.txt");
+    data500.ReadData(NUM_FILE_500, "NumFile500.txt");
 
 
     std::cout << "Sorting...\n";

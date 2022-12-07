@@ -93,7 +93,7 @@ void DataHousing::SelectionSort(int whichFile) {
 }
 
 
-void DataHousing::ReadData(const char* fileName) {
+void DataHousing::ReadData(int whichFile, const char* fileName) {
 	int i = 0;
 
 	std::ifstream inputHandle(fileName, std::ios::in);
