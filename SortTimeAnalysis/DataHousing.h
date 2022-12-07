@@ -7,7 +7,6 @@ private:
 	int* bubbleSort;
 	int* insertionSort;
 	int* selectionSort;
-	int* storageArray;
 
 public:
 	DataHousing(int);

@@ -14,12 +14,10 @@ DataHousing::DataHousing(int whichFile) {
 	this->bubbleSort = new int[whichFile];
 	this->insertionSort = new int[whichFile];
 	this->selectionSort = new int[whichFile];
-	this->storageArray = new int[whichFile];
 }
 
 
 DataHousing::~DataHousing() {
-	delete[] storageArray;
 	delete[] bubbleSort;
 	delete[] insertionSort;
 	delete[] selectionSort;
@@ -64,10 +62,16 @@ int DataHousing::InsertionSort(int whichFile) {
 		}
 		this->insertionSort[j + 1] = currentValue;
 	}
+	insertionTimer.Stop();
+	return insertionTimer.GetTime();
 }
 
 
 int DataHousing::SelectionSort(int whichFile) {
+	Timer selectionTimer;
+
+	selectionTimer.Start();
+
 	for (int i = 0; i < whichFile - 1; i++) {
 		int currentMin = i;
 		for (int j = i + 1; j < whichFile; j++) {
@@ -79,6 +83,8 @@ int DataHousing::SelectionSort(int whichFile) {
 		selectionSort[i] = selectionSort[currentMin];
 		selectionSort[currentMin] = tempNum;
 	}
+	selectionTimer.Stop();
+	return selectionTimer.GetTime();
 }
 
 
@@ -93,7 +99,6 @@ void DataHousing::ReadData(int whichFile, const char* fileName) {
 		i = 0;
 		while (!inputHandle.eof()) {
 			if (i < whichFile) {
-				//inputHandle >> storageArray[i];
 				inputHandle >> bubbleSort[i];
 				inputHandle >> insertionSort[i];
 				inputHandle >> selectionSort[i];
