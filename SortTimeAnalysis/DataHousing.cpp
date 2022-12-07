@@ -26,16 +26,16 @@ DataHousing::~DataHousing() {
 
 
 void DataHousing::BubbleSort(int whichFile) {
-	bool swap = 1;
-	while (swap == 1) {
-		swap = 0;
+	bool swap = true;
+	while (swap == true) {
+		swap = false;
 		for (int i = 0; i <= whichFile - 2; i++) {
 			int j = i + 1;
 			if (bubbleSort[i] > bubbleSort[j]) {
 				int temp = bubbleSort[j];
 				bubbleSort[j] = bubbleSort[i];
 				bubbleSort[i] = temp;
-				swap = 1;
+				swap = true;
 			}
 		}
 	}
@@ -82,7 +82,7 @@ void DataHousing::ReadData(int whichFile, const char* fileName) {
 		i = 0;
 		while (!inputHandle.eof()) {
 			if (i < whichFile) {
-				inputHandle >> storageArray[i];
+				//inputHandle >> storageArray[i];
 				inputHandle >> bubbleSort[i];
 				inputHandle >> insertionSort[i];
 				inputHandle >> selectionSort[i];
