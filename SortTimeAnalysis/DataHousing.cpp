@@ -13,12 +13,10 @@ DataHousing::DataHousing(int whichFile) {
 	this->bubbleSort = new int[whichFile];
 	this->insertionSort = new int[whichFile];
 	this->selectionSort = new int[whichFile];
-	this->storageArray = new int[whichFile];
 }
 
 
 DataHousing::~DataHousing() {
-	delete[] storageArray;
 	delete[] bubbleSort;
 	delete[] insertionSort;
 	delete[] selectionSort;
