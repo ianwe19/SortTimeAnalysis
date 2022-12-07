@@ -1,5 +1,4 @@
 #include "Timer.h"
-#include <iostream>
 #include <time.h>
 
 
@@ -47,7 +46,6 @@ bool Timer::IsTicking() {
 int Timer::GetTime() {
 	this->elapsedTime = this->endTime - this->beginTime;
 	this->milsElapsed = elapsedTime / (CLOCKS_PER_SEC / 1000);
-	//std::cout << this->milsElapsed << " milliseconds\n";
 	return this->milsElapsed;
 }
 
