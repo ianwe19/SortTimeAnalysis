@@ -19,10 +19,11 @@ DataHousing::DataHousing() {
 
 
 DataHousing::DataHousing(int whichFile) {
-	this->bubbleSort[whichFile] = 0;
-	this->insertionSort[whichFile] = 0;
-	this->selectionSort[whichFile] = 0;
-	this->storageArray[whichFile] = 0;
+	this->bubbleSort = new int[whichFile];
+	this->insertionSort = new int[whichFile];
+	this->selectionSort = new int[whichFile];
+	this->storageArray = new int[whichFile];
+	this->copyArray = new int[whichFile];
 	this->arrayLength = 0;
 }
 
@@ -32,6 +33,7 @@ DataHousing::~DataHousing() {
 	delete[] bubbleSort;
 	delete[] insertionSort;
 	delete[] selectionSort;
+	delete[] copyArray;
 }
 
 

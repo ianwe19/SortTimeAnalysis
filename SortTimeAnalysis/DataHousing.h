@@ -8,6 +8,7 @@ private:
 	int* insertionSort;
 	int* selectionSort;
 	int* storageArray;
+	int* copyArray;
 	int arrayLength;
 
 public:
