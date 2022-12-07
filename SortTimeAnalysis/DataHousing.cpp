@@ -27,8 +27,11 @@ DataHousing::DataHousing(int whichFile) {
 }
 
 
-DataHousing::DataHousing() {
+DataHousing::~DataHousing() {
 	delete[] storageArray;
+	delete[] bubbleSort;
+	delete[] insertionSort;
+	delete[] selectionSort;
 }
 
 
