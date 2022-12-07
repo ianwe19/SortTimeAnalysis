@@ -49,3 +49,11 @@ void Timer::GetTime() {
 	this->milsElapsed = elapsedTime / (CLOCKS_PER_SEC / 1000);
 	std::cout << this->milsElapsed << " milliseconds\n";
 }
+
+
+void Timer::Clear() {
+	this->beginTime = 0;
+	this->endTime = 0;
+	this->elapsedTime = 0;
+	this->milsElapsed = 0;
+}

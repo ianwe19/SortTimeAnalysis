@@ -22,5 +22,7 @@ public:
 
 	void GetTime();
 
+	void Clear();
+
 };
 #endif

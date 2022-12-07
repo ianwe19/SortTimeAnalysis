@@ -48,26 +48,30 @@ int main()
     insertionTimer.GetTime();
     std::cout << "Elapsed time <Selection Sort>   : ";
     selectionTimer.GetTime();
+
+    bubbleTimer.Clear();
+    insertionTimer.Clear();
+    selectionTimer.Clear();
     // END 500 ELEMENT SORT
 
 
     // BEGIN 5K ELEMENT SORT
     std::cout << "Populating arrays... <5K elements> <\n";
 
-    data500.ReadData(NUM_FILE_5K, "NumFile5K.txt");
+    data5K.ReadData(NUM_FILE_5K, "NumFile5K.txt");
 
     std::cout << "Sorting...\n";
 
     bubbleTimer.Start();
-    data500.BubbleSort(NUM_FILE_5K);
+    data5K.BubbleSort(NUM_FILE_5K);
     bubbleTimer.Stop();
 
     insertionTimer.Start();
-    data500.InsertionSort(NUM_FILE_5K);
+    data5K.InsertionSort(NUM_FILE_5K);
     insertionTimer.Stop();
 
     selectionTimer.Start();
-    data500.SelectionSort(NUM_FILE_5K);
+    data5K.SelectionSort(NUM_FILE_5K);
     selectionTimer.Stop();
 
     std::cout << "SORTS COMPLETE!\n";
@@ -77,26 +81,30 @@ int main()
     insertionTimer.GetTime();
     std::cout << "Elapsed time <Selection Sort>   : ";
     selectionTimer.GetTime();
+
+    bubbleTimer.Clear();
+    insertionTimer.Clear();
+    selectionTimer.Clear();
     // END 5K ELEMENT SORT
 
 
     // BEGIN 25K ELEMENT SORT
     std::cout << "Populating arrays... <25K elements> <\n";
 
-    data500.ReadData(NUM_FILE_25K, "NumFile25K.txt");
+    data25K.ReadData(NUM_FILE_25K, "NumFile25K.txt");
 
     std::cout << "Sorting...\n";
 
     bubbleTimer.Start();
-    data500.BubbleSort(NUM_FILE_25K);
+    data25K.BubbleSort(NUM_FILE_25K);
     bubbleTimer.Stop();
 
     insertionTimer.Start();
-    data500.InsertionSort(NUM_FILE_25K);
+    data25K.InsertionSort(NUM_FILE_25K);
     insertionTimer.Stop();
 
     selectionTimer.Start();
-    data500.SelectionSort(NUM_FILE_25K);
+    data25K.SelectionSort(NUM_FILE_25K);
     selectionTimer.Stop();
 
     std::cout << "SORTS COMPLETE!\n";
@@ -106,26 +114,30 @@ int main()
     insertionTimer.GetTime();
     std::cout << "Elapsed time <Selection Sort>   : ";
     selectionTimer.GetTime();
+
+    bubbleTimer.Clear();
+    insertionTimer.Clear();
+    selectionTimer.Clear();
     // END 25K ELEMENT SORT
 
 
     // BEGIN 100K ELEMENT SORT
     std::cout << "Populating arrays... <100K elements> <\n";
 
-    data500.ReadData(NUM_FILE_100K, "NumFile100K.txt");
+    data100K.ReadData(NUM_FILE_100K, "NumFile100K.txt");
 
     std::cout << "Sorting...\n";
 
     bubbleTimer.Start();
-    data500.BubbleSort(NUM_FILE_100K);
+    data100K.BubbleSort(NUM_FILE_100K);
     bubbleTimer.Stop();
 
     insertionTimer.Start();
-    data500.InsertionSort(NUM_FILE_100K);
+    data100K.InsertionSort(NUM_FILE_100K);
     insertionTimer.Stop();
 
     selectionTimer.Start();
-    data500.SelectionSort(NUM_FILE_100K);
+    data100K.SelectionSort(NUM_FILE_100K);
     selectionTimer.Stop();
 
     std::cout << "SORTS COMPLETE!\n";
@@ -135,6 +147,10 @@ int main()
     insertionTimer.GetTime();
     std::cout << "Elapsed time <Selection Sort>   : ";
     selectionTimer.GetTime();
+
+    bubbleTimer.Clear();
+    insertionTimer.Clear();
+    selectionTimer.Clear();
     // END 100K ELEMENT SORT
 
 

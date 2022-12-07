@@ -39,10 +39,6 @@ DataHousing::~DataHousing() {
 
 
 void DataHousing::BubbleSort(int whichFile) {
-	for (int i = 0; i < whichFile; i++) {
-		this->bubbleSort[i] = this->storageArray[i];
-	}
-
 	bool swap = true;
 	while (swap == true) {
 		swap = false;
@@ -60,11 +56,6 @@ void DataHousing::BubbleSort(int whichFile) {
 
 
 void DataHousing::InsertionSort(int whichFile) {
-	for (int i = 0; i < whichFile; i++) {
-		this->insertionSort[i] = this->insertionSort[i];
-	}
-
-
 	int currentValue;
 	for (int i = 1; i < whichFile; i++) {
 		int j = i - 1;
@@ -105,6 +96,9 @@ void DataHousing::ReadData(int whichFile, const char* fileName) {
 		while (!inputHandle.eof()) {
 			if (i < whichFile) {
 				inputHandle >> storageArray[i];
+				inputHandle >> bubbleSort[i];
+				inputHandle >> insertionSort[i];
+				inputHandle >> selectionSort[i];
 				i++;
 			}
 		}
