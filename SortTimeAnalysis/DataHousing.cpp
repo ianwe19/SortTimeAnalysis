@@ -15,6 +15,7 @@ DataHousing::DataHousing() {
 	this->selectionSort = 0;
 	this->arrayLength = 0;
 	this->storageArray = 0;
+	this->copyArray = 0;
 }
 
 

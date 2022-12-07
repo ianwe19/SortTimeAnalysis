@@ -11,7 +11,6 @@ private:
 	long int milsElapsed;
 
 public:
-	// CONSTRUCTOR
 	Timer();
 
 
