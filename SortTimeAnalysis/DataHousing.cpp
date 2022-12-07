@@ -14,8 +14,6 @@ DataHousing::DataHousing(int whichFile) {
 	this->insertionSort = new int[whichFile];
 	this->selectionSort = new int[whichFile];
 	this->storageArray = new int[whichFile];
-	this->copyArray = new int[whichFile];
-	this->arrayLength = 0;
 }
 
 
@@ -24,21 +22,20 @@ DataHousing::~DataHousing() {
 	delete[] bubbleSort;
 	delete[] insertionSort;
 	delete[] selectionSort;
-	delete[] copyArray;
 }
 
 
 void DataHousing::BubbleSort(int whichFile) {
-	bool swap = true;
-	while (swap == true) {
-		swap = false;
-		for (int i = 0; i <= whichFile -2; i++) {
+	bool swap = 1;
+	while (swap == 1) {
+		swap = 0;
+		for (int i = 0; i <= whichFile - 2; i++) {
 			int j = i + 1;
-			if (this->bubbleSort[i] > this->bubbleSort[j]) {
-				int temp = this->bubbleSort[j];
-				this->bubbleSort[j] = this->bubbleSort[i];
-				this->bubbleSort[i] = temp;
-				swap = false;
+			if (bubbleSort[i] > bubbleSort[j]) {
+				int temp = bubbleSort[j];
+				bubbleSort[j] = bubbleSort[i];
+				bubbleSort[i] = temp;
+				swap = 1;
 			}
 		}
 	}
