@@ -35,11 +35,11 @@ bool Timer::Stop() {
 
 
 bool Timer::IsTicking() {
-	if (this->endTime = NULL) {
-		return false;
+	if (this->endTime - this->beginTime < 0) {
+		return true;
 	}
 	else {
-		return true;
+		return false;
 	}
 }
 
