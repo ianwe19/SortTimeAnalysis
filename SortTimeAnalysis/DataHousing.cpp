@@ -9,16 +9,6 @@
 #define NUM_FILE_100K 100000
 
 
-DataHousing::DataHousing() {
-	this->bubbleSort = 0;
-	this->insertionSort = 0;
-	this->selectionSort = 0;
-	this->arrayLength = 0;
-	this->storageArray = 0;
-	this->copyArray = 0;
-}
-
-
 DataHousing::DataHousing(int whichFile) {
 	this->bubbleSort = new int[whichFile];
 	this->insertionSort = new int[whichFile];
@@ -72,7 +62,7 @@ void DataHousing::InsertionSort(int whichFile) {
 void DataHousing::SelectionSort(int whichFile) {
 	for (int i = 0; i < whichFile - 1; i++) {
 		int currentMin = i;
-		for (int j = i + 1; j < arrayLength; j++) {
+		for (int j = i + 1; j < whichFile; j++) {
 			if (this->selectionSort[j] < selectionSort[currentMin])
 				currentMin = j;
 		}

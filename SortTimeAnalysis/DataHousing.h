@@ -12,7 +12,6 @@ private:
 	int arrayLength;
 
 public:
-	DataHousing();
 	DataHousing(int);
 
 	~DataHousing();
