@@ -24,14 +24,22 @@ int main()
 
     std::cout << "Populating arrays... <500 elements> <\n";
 
-    data500.ReadData(NUM_FILE_500);
+    data500.ReadData("NumFile500.txt");
 
 
     std::cout << "Sorting...\n";
 
     bubbleTimer.Start();
+    data500.BubbleSort(NUM_FILE_500);
+    bubbleTimer.Stop();
 
-    data500.BubbleSort();
+    insertionTimer.Start();
+    data500.InsertionSort(NUM_FILE_500);
+    insertionTimer.Stop();
+
+    std::cout << "SORTS COMPLETE!\n";
+    std::cout << "Elapsed time <Bubble Sort>      :   ";
+    bubbleTimer.GetTime();
 
 
     return 0;

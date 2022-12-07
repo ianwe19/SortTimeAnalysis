@@ -21,10 +21,10 @@ public:
 	~DataHousing();
 
 
-	void BubbleSort();
+	void BubbleSort(int);
 	void InsertionSort(int);
 	void SelectionSort(int);
 
-	void ReadData(int);
+	void ReadData(const char*);
 };
 #endif

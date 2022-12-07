@@ -38,12 +38,15 @@ DataHousing::~DataHousing() {
 }
 
 
-void DataHousing::BubbleSort() {
+void DataHousing::BubbleSort(int whichFile) {
+	for (int i = 0; i < whichFile; i++) {
+		this->bubbleSort[i] = this->storageArray[i];
+	}
 
 	bool swap = true;
 	while (swap == true) {
 		swap = false;
-		for (int i = 0; i <= this->arrayLength -2; i++) {
+		for (int i = 0; i <= whichFile -2; i++) {
 			int j = i + 1;
 			if (this->bubbleSort[i] > this->bubbleSort[j]) {
 				int temp = this->bubbleSort[j];
@@ -57,6 +60,11 @@ void DataHousing::BubbleSort() {
 
 
 void DataHousing::InsertionSort(int whichFile) {
+	for (int i = 0; i < whichFile; i++) {
+		this->insertionSort[i] = this->insertionSort[i];
+	}
+
+
 	int currentValue;
 	for (int i = 1; i < whichFile; i++) {
 		int j = i - 1;
@@ -85,23 +93,10 @@ void DataHousing::SelectionSort(int whichFile) {
 }
 
 
-void DataHousing::ReadData(int whichFile) {
+void DataHousing::ReadData(const char* fileName) {
 	int i = 0;
 
-	if (whichFile == NUM_FILE_500) {
-		std::ifstream inputHandle("NumFile500.txt", std::ios::in);
-	}
-	else if (whichFile == NUM_FILE_5K) {
-		std::ifstream inputHandle("NumFile5K.txt", std::ios::in);
-	}
-	else if (whichFile == NUM_FILE_25K) {
-		std::ifstream inputHandle("NumFile25K.txt", std::ios::in);
-	}
-	else if (whichFile == NUM_FILE_100K) {
-		std::ifstream inputHandle("NumFile100K.txt", std::ios::in);
-	}
-
-	std::ifstream inputHandle("NumFile500.txt", std::ios::in);
+	std::ifstream inputHandle(fileName, std::ios::in);
 
 	// check to make sure the file opened...
 	if (inputHandle.is_open() == true) {
