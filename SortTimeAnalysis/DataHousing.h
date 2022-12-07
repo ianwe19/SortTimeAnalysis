@@ -7,6 +7,7 @@ private:
 	int* bubbleSort;
 	int* insertionSort;
 	int* selectionSort;
+	int* storageArray;
 	int arrayLength;
 
 public:
@@ -18,6 +19,6 @@ public:
 	void InsertionSort(int*);
 	void SelectionSort(int*);
 
-	void ReadData();
+	void ReadData(int);
 };
 #endif

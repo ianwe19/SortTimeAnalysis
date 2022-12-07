@@ -1,4 +1,12 @@
 #include "DataHousing.h"
+#include <fstream>
+#include <iostream>
+
+
+#define NUM_FILE_500  0
+#define NUM_FILE_5K   1
+#define NUM_FILE_25K  2
+#define NUM_FILE_100K 3
 
 
 DataHousing::DataHousing() {
@@ -6,6 +14,7 @@ DataHousing::DataHousing() {
 	this->insertionSort = 0;
 	this->selectionSort = 0;
 	this->arrayLength = 0;
+	this->storageArray = 0;
 }
 
 
@@ -55,6 +64,40 @@ void DataHousing::SelectionSort(int* numbersArray) {
 }
 
 
-void DataHousing::ReadData() {
+void DataHousing::ReadData(int whichFile) {
+	int i = 0;
 
+	if (whichFile == NUM_FILE_500) {
+		std::ifstream inputHandle("NumFile500.txt", std::ios::in);
+	}
+	else if (whichFile == NUM_FILE_5K) {
+		std::ifstream inputHandle("NumFile5K.txt", std::ios::in);
+	}
+	else if (whichFile == NUM_FILE_25K) {
+		std::ifstream inputHandle("NumFile25K.txt", std::ios::in);
+	}
+	else if (whichFile == NUM_FILE_100K) {
+		std::ifstream inputHandle("NumFile100K.txt", std::ios::in);
+	}
+
+	std::ifstream inputHandle("NumFile500.txt", std::ios::in);
+
+	// check to make sure the file opened...
+	if (inputHandle.is_open() == true) {
+		// if the file opened, read integers until EOF (end of file) is encountered
+		i = 0;
+		while (!inputHandle.eof()) {
+			if (i < arrayLength) {
+				inputHandle >> storageArray[i];
+				i++;
+			}
+		}
+
+		// close the file now that we are done reading
+		inputHandle.close();
+	}
+	else {
+		// if the file didn't open, echo this to the user
+		std::cout << "ERROR: The file could not be opened for reading...\n";
+	}
 }
