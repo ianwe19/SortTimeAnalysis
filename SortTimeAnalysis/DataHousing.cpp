@@ -118,17 +118,3 @@ void DataHousing::ReadData(int whichFile, const char* fileName) {
 	}
 
 }
-
-
-void DataHousing::MakeArrayCopy(int whichFile) {
-	for (int i = 0; i < whichFile; i++) {
-		this->copyArray[i] = this->storageArray[i];
-	}
-}
-
-
-void DataHousing::RestoreArrayCopy(int whichFile) {
-	for (int i = 0; i < whichFile; i++) {
-		this->storageArray[i] = this->copyArray[i];
-	}
-}

@@ -11,9 +11,6 @@ private:
 	int* copyArray;
 	int arrayLength;
 
-	void MakeArrayCopy(int);
-	void RestoreArrayCopy(int);
-
 public:
 	DataHousing();
 	DataHousing(int);
