@@ -31,14 +31,14 @@ int main()
 
     bubbleTime = data500.BubbleSort(NUM_FILE_500);
 
-    data500.InsertionSort(NUM_FILE_500);
+    insertionTime = data500.InsertionSort(NUM_FILE_500);
 
-    data500.SelectionSort(NUM_FILE_500);
+    selectionTime = data500.SelectionSort(NUM_FILE_500);
 
     std::cout << "SORTS COMPLETE!\n";
-    std::cout << "Elapsed time <Bubble Sort>      : " << bubbleTime;
-    std::cout << "Elapsed time <Insertion Sort>   : " << insertionTime;
-    std::cout << "Elapsed time <Selection Sort>   : " << selectionTime;
+    std::cout << "Elapsed time <Bubble Sort>      : " << bubbleTime << "\n";
+    std::cout << "Elapsed time <Insertion Sort>   : " << insertionTime << "\n";
+    std::cout << "Elapsed time <Selection Sort>   : " << selectionTime << "\n";
     // END 500 ELEMENT SORT
 
 
@@ -49,18 +49,17 @@ int main()
 
     std::cout << "Sorting...\n";
 
-    data5K.BubbleSort(NUM_FILE_5K);
+    bubbleTime = data5K.BubbleSort(NUM_FILE_5K);
 
-    data5K.InsertionSort(NUM_FILE_5K);
+    insertionTime = data5K.InsertionSort(NUM_FILE_5K);
 
-    data5K.SelectionSort(NUM_FILE_5K);
+    selectionTime = data5K.SelectionSort(NUM_FILE_5K);
 
 
     std::cout << "SORTS COMPLETE!\n";
-    std::cout << "Elapsed time <Bubble Sort>      : " << bubbleTime;
-    std::cout << "Elapsed time <Insertion Sort>   : " << insertionTime;
-    std::cout << "Elapsed time <Selection Sort>   : " << selectionTime;
-
+    std::cout << "Elapsed time <Bubble Sort>      : " << bubbleTime << "\n";
+    std::cout << "Elapsed time <Insertion Sort>   : " << insertionTime << "\n";
+    std::cout << "Elapsed time <Selection Sort>   : " << selectionTime << "\n";
     // END 5K ELEMENT SORT
 
 
@@ -71,17 +70,16 @@ int main()
 
     std::cout << "Sorting...\n";
 
-    data25K.BubbleSort(NUM_FILE_25K);
+    bubbleTime = data25K.BubbleSort(NUM_FILE_25K);
 
-    data25K.InsertionSort(NUM_FILE_25K);
+    insertionTime = data25K.InsertionSort(NUM_FILE_25K);
 
-
-    data25K.SelectionSort(NUM_FILE_25K);
+    selectionTime = data25K.SelectionSort(NUM_FILE_25K);
 
     std::cout << "SORTS COMPLETE!\n";
-    std::cout << "Elapsed time <Bubble Sort>      : " << bubbleTime;
-    std::cout << "Elapsed time <Insertion Sort>   : " << insertionTime;
-    std::cout << "Elapsed time <Selection Sort>   : " << selectionTime;
+    std::cout << "Elapsed time <Bubble Sort>      : " << bubbleTime << "\n";
+    std::cout << "Elapsed time <Insertion Sort>   : " << insertionTime << "\n";
+    std::cout << "Elapsed time <Selection Sort>   : " << selectionTime << "\n";
     // END 25K ELEMENT SORT
 
 
@@ -92,16 +90,16 @@ int main()
 
     std::cout << "Sorting...\n";
 
-    data100K.BubbleSort(NUM_FILE_100K);
+    bubbleTime = data100K.BubbleSort(NUM_FILE_100K);
 
-    data100K.InsertionSort(NUM_FILE_100K);
+    insertionTime = data100K.InsertionSort(NUM_FILE_100K);
 
-    data100K.SelectionSort(NUM_FILE_100K);
+    selectionTime = data100K.SelectionSort(NUM_FILE_100K);
 
     std::cout << "SORTS COMPLETE!\n";
-    std::cout << "Elapsed time <Bubble Sort>      : " << bubbleTime;
-    std::cout << "Elapsed time <Insertion Sort>   : " << insertionTime;
-    std::cout << "Elapsed time <Selection Sort>   : " << selectionTime;
+    std::cout << "Elapsed time <Bubble Sort>      : " << bubbleTime << "\n";
+    std::cout << "Elapsed time <Insertion Sort>   : " << insertionTime << "\n";
+    std::cout << "Elapsed time <Selection Sort>   : " << selectionTime << "\n";
     // END 100K ELEMENT SORT
 
 
