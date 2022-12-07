@@ -16,7 +16,9 @@ public:
 
 
 	void BubbleSort(int);
+
 	void InsertionSort(int);
+
 	void SelectionSort(int);
 
 	void ReadData(int, const char*);
