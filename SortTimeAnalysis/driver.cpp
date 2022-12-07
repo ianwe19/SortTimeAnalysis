@@ -48,10 +48,6 @@ int main()
     insertionTimer.GetTime();
     std::cout << "Elapsed time <Selection Sort>   : ";
     selectionTimer.GetTime();
-
-    bubbleTimer.Clear();
-    insertionTimer.Clear();
-    selectionTimer.Clear();
     // END 500 ELEMENT SORT
 
 
@@ -81,10 +77,6 @@ int main()
     insertionTimer.GetTime();
     std::cout << "Elapsed time <Selection Sort>   : ";
     selectionTimer.GetTime();
-
-    bubbleTimer.Clear();
-    insertionTimer.Clear();
-    selectionTimer.Clear();
     // END 5K ELEMENT SORT
 
 
@@ -114,10 +106,6 @@ int main()
     insertionTimer.GetTime();
     std::cout << "Elapsed time <Selection Sort>   : ";
     selectionTimer.GetTime();
-
-    bubbleTimer.Clear();
-    insertionTimer.Clear();
-    selectionTimer.Clear();
     // END 25K ELEMENT SORT
 
 
@@ -147,10 +135,6 @@ int main()
     insertionTimer.GetTime();
     std::cout << "Elapsed time <Selection Sort>   : ";
     selectionTimer.GetTime();
-
-    bubbleTimer.Clear();
-    insertionTimer.Clear();
-    selectionTimer.Clear();
     // END 100K ELEMENT SORT
 
 
