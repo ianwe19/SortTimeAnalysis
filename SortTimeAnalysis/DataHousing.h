@@ -11,6 +11,9 @@ private:
 	int* copyArray;
 	int arrayLength;
 
+	void MakeArrayCopy(int);
+	void RestoreArrayCopy(int);
+
 public:
 	DataHousing();
 	DataHousing(int);
@@ -18,9 +21,9 @@ public:
 	~DataHousing();
 
 
-	void BubbleSort(int*);
-	void InsertionSort(int*);
-	void SelectionSort(int*);
+	void BubbleSort();
+	void InsertionSort(int);
+	void SelectionSort(int);
 
 	void ReadData(int);
 };
