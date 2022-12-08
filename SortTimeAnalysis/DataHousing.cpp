@@ -3,12 +3,13 @@
 #include <iostream>
 
 
-#define FIRST_FILE  500
-#define SECOND_FILE   5000
-#define THIRD_FILE  25000
-#define FOURTH_FILE 100000
+#define FIRST_FILE   500
+#define SECOND_FILE  5000
+#define THIRD_FILE   25000
+#define FOURTH_FILE  100000
 
 
+// CONSTRUCTOR - allocate memory for dynamic arrays according which file we are using
 DataHousing::DataHousing(int whichFile) {
 	this->bubbleSort = new int[whichFile];
 	this->insertionSort = new int[whichFile];
@@ -16,6 +17,7 @@ DataHousing::DataHousing(int whichFile) {
 }
 
 
+// DESTRUCTOR - deallocate memory from dynamic arrays
 DataHousing::~DataHousing() {
 	delete[] bubbleSort;
 	delete[] insertionSort;
@@ -23,6 +25,7 @@ DataHousing::~DataHousing() {
 }
 
 
+// bubble sort that acts only on this->bubbleSort[]
 void DataHousing::BubbleSort(int whichFile) {
 	bool swap = true;
 	while (swap == true) {
@@ -40,6 +43,7 @@ void DataHousing::BubbleSort(int whichFile) {
 }
 
 
+// insertion sort that acts only on this->insertionSort[]
 void DataHousing::InsertionSort(int whichFile) {
 	int currentValue;
 	for (int i = 1; i < whichFile; i++) {
@@ -54,6 +58,7 @@ void DataHousing::InsertionSort(int whichFile) {
 }
 
 
+// selection sort that acts only on this->selectionSort[]
 void DataHousing::SelectionSort(int whichFile) {
 	for (int i = 0; i < whichFile - 1; i++) {
 		int currentMin = i;
@@ -69,14 +74,17 @@ void DataHousing::SelectionSort(int whichFile) {
 }
 
 
+// open file, parse data, insert into each array to be sorted
 void DataHousing::ReadData(int whichFile, const char* fileName) {
 	int i = 0;
 
+	// get the input handle for the file we are using
 	std::ifstream inputHandle(fileName, std::ios::in);
 
 	// check to make sure the file opened...
 	if (inputHandle.is_open() == true) {
 		// if the file opened, read integers until EOF (end of file) is encountered
+		// and insert into all 3 arrays to be sorted
 		i = 0;
 		while (!inputHandle.eof()) {
 			if (i < whichFile) {
