@@ -3,10 +3,10 @@
 #include <iostream>
 
 
-#define NUM_FILE_500  500
-#define NUM_FILE_5K   5000
-#define NUM_FILE_25K  25000
-#define NUM_FILE_100K 100000
+#define FIRST_FILE  500
+#define SECOND_FILE   5000
+#define THIRD_FILE  25000
+#define FOURTH_FILE 100000
 
 
 DataHousing::DataHousing(int whichFile) {
@@ -80,7 +80,6 @@ void DataHousing::ReadData(int whichFile, const char* fileName) {
 		i = 0;
 		while (!inputHandle.eof()) {
 			if (i < whichFile) {
-				//inputHandle >> storageArray[i];
 				inputHandle >> bubbleSort[i];
 				inputHandle >> insertionSort[i];
 				inputHandle >> selectionSort[i];
