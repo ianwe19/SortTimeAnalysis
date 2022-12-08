@@ -25,6 +25,7 @@ bool Timer::Start() {
 // record stop time as long as timer is currently ticking
 bool Timer::Stop() {
 	if (this->IsTicking()) {
+		// record end time
 		this->endTime = clock();
 		return true;
 	}
@@ -45,7 +46,13 @@ bool Timer::IsTicking() {
 
 // calculate total elapsed time, seconds and milliseconds, and print formatted time passed
 void Timer::GetTime() {
+
+	// calculate elapsed time
 	this->elapsedTime = this->endTime - this->beginTime;
+
+	// translate timer into milliseconds (x ticks / 1 second) * (1 second / 1000 milliseconds)
 	this->milsElapsed = elapsedTime / (CLOCKS_PER_SEC / 1000);
+
+	// print formatted amount of milliseconds passed
 	std::cout << this->milsElapsed << " milliseconds\n";
 }
